@@ -3,6 +3,7 @@ import {MyButton} from "../Component/MyButton"
 import {MyInput} from "../Component/MyInput"
 import {MyTabs} from "../Component/MyTabs"
 import { MyLabel } from "../Component/MyLabel";
+import { MyTab } from "../Component/MyTab";
 
 
 const keysToComponentMap = {
@@ -10,14 +11,30 @@ const keysToComponentMap = {
     MyInput: MyInput,
     MyTabs: MyTabs,
     MyLabel: MyLabel,
+    components: MyTab,
   };
 
-function renderChildTab(params) {
 
+  function renderTab(config){
+        return React.createElement(
+             MyTab,
+             {
+                title: config.title,
+                key: config.id,
+                components: config.components
+             },
+             config.components &&
+                 (typeof config.components === 'string'
+                 ? config.components
+                 : config.components.map(child => renderer(child)))
+     
+         )  
     
-}
+  }
+
   
 function renderer(config) {
+    console.log(config)
     if (typeof keysToComponentMap[config.base_component] !== 'undefined'){
         return React.createElement(
              keysToComponentMap[config.base_component],
@@ -31,7 +48,7 @@ function renderer(config) {
              config.children &&
                  (typeof config.children === 'string'
                  ? config.children
-                 : config.children.map(child => renderer(child)))
+                 : config.children.map(child => renderTab(child)))
      
          )  
     }
