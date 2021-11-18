@@ -1,15 +1,9 @@
-import React from 'react'
-import renderer from "../API/RenderFunctions";
 
-var componentList = require('../API/ComponentList')
-var makeComopnentToList = Object.entries(componentList)
-
-function MyTabs() {
+export const MyTabs = ({ text, style, id, children }) => {
     return (
-        <div id='tab1'>
-           
-        </div>
-    )
-}
-
-export default MyTabs
+      <div id={id} style={style}>
+        {children}
+        <h1>hi this is tabs</h1>
+      </div>
+    );
+  };
