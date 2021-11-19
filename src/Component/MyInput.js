@@ -1,13 +1,13 @@
 
 
-export const MyInput = ({ text, style, id, children }) => {
+export const MyInput = ({ text, style, id, attributes , children }) => {
     return (
       <div>
-        <input id={id} text={text} style={style} >
+        <input 
+        id={id} text={text} style={style} placeholder={attributes.placeholder} >
         </input>
-        <h1>hello from input</h1>
-      </div>
-     
-     
+      </div>  
     );
   };
+
+
