@@ -53,13 +53,13 @@ html {
 
 body {
   display: flex;
-  align-items: center;
+  padding-top: 10%;
   justify-content: center;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
-  color: #455A64;
-  background-color: #c6f716;
+  color: #080808;
+  background-color: #ada2ec;
   font-family: var(--fontFamily);
   font-size: var(--fontSizeMd);
   line-height: var(--lineHeightMd);

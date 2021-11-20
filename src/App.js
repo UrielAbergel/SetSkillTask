@@ -1,29 +1,13 @@
 import renderer from "./API/RenderFunctions";
 import React, {useState} from "react";
 
-var componentList = require('./API/ComponentList')
-
+var componentList = require('./API/ComponentJSON')
 
 function App() {
-
-  const [inputText, setInput] = useState('')
-
-  const handlePassTextFromInputToState = (textFromInput) => {
-    setInput(textFromInput)
-  }
-
-  const handleOnClickButton = () => {
-    return inputText
-  }
-
   return (
     <div>
-      {renderer(componentList.simulation, {handlePassTextFromInputToState})}
+      {renderer(componentList.simulation)}
     </div>
   );
-
-
-  
 }
-
 export default App;

@@ -1,10 +1,10 @@
+import './MyLabel.css'
 
-
-export const MyLabel = ({style, id, children }) => {
+export const MyLabel = ({id, children}) => {
 
     return (
-      <div style={style}>
-        <h1 id = {id}></h1>
+      <div>
+        <h2 id={id} className='labelCenter'></h2>
         {children}
       </div>
     );
