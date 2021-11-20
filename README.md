@@ -1,12 +1,12 @@
 # SetSkill Junior Task
 
-### Instructions
+# Instructions
 * Run ` git clone git@github.com:UrielAbergel/SetSkillTask.git `
 * Run `cd SetSkillTask && npm install`
 * Run `cd SetSkillTask && npm start`
 
 
-# API
+# Explain the implementaion 
 The files that responsible for creating the components.
 
 * ComponentJson.js is responsible for storing a JSON file that defines the structure of the website.
