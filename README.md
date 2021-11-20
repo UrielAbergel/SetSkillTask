@@ -1,6 +1,6 @@
 # SetSkill Junior Task
 
-### To start the project on your desktop
+### Instructions
 * Run ` git clone git@github.com:UrielAbergel/SetSkillTask.git `
 * Run `cd SetSkillTask && npm install`
 * Run `cd SetSkillTask && npm start`
