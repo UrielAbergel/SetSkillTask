@@ -1,12 +1,16 @@
+import './MyInput.css'
 
-
-export const MyInput = ({ text, style, id, attributes , children }) => {
+export const MyInput = ({ text, id, attributes , children }) => {
     return (
-      <div>
+    <div className='Input'>
         <input 
-        id={id} text={text} style={style} placeholder={attributes.placeholder} >
+        id={id} 
+        className='Input-text'
+        placeholder={attributes.placeholder} 
+        >
         </input>
-      </div>  
+        <label for="input" class="Input-label">{text}</label>      
+    </div>  
     );
   };
 

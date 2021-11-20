@@ -18,9 +18,7 @@ function App() {
 
   return (
     <div>
-      <h1>pp</h1>
       {renderer(componentList.simulation, {handlePassTextFromInputToState})}
-      <h1>pp</h1>
     </div>
   );
 
