@@ -1,17 +1,21 @@
+import React from 'react'
 import './MyInput.css'
 
-export const MyInput = ({ text, id, attributes , children }) => {
-    return (
-    <div className='Input'>
+export class MyInput extends React.Component {
+
+    render () {
+        return ( 
+        <div className='Input'>
         <input 
-        id={id} 
+        id={this.props.id} 
         className='Input-text'
-        placeholder={attributes.placeholder} 
+        placeholder={this.props.attributes.placeholder} 
         >
         </input>
-        <label for="input" class="Input-label">{text}</label>      
-    </div>  
-    );
+        <label for="input" class="Input-label">{this.props.text}</label>      
+         </div>  
+        )  
+    }
   };
 
 

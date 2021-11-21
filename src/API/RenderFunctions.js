@@ -34,7 +34,6 @@ const keysToComponentMap = {
 
   
 function renderer(config) {
-    console.log(config)
     if (typeof keysToComponentMap[config.base_component] !== 'undefined'){
         return React.createElement(
              keysToComponentMap[config.base_component],

@@ -1,9 +1,19 @@
 
-export const MyTabs = ({ style, id, children }) => {
+import React from "react";
 
-     return (
-      <div id={id} style={style}>
-        {children}
+export class MyTabs extends React.Component {
+
+  constructor(props) {
+      super(props);
+      this.state = {click: false};
+  }
+
+  render () {
+      return (
+        <div id={this.props.id}>
+        {this.props.children}
       </div>
-    );
-  };
+       )  
+  }
+};
+

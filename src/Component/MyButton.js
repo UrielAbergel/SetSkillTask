@@ -1,16 +1,19 @@
 
+import React from 'react'
 import './MyButton.css'
 
-export const MyButton = ({ text, style, id , click }) => {
+ export class MyButton extends React.Component {
 
-    const handleClick = () => {
-       var outputText = document.getElementById(click.source_id).value
-       console.log(outputText)
-       document.getElementById(click.target_id).innerHTML = outputText
-       document.getElementById(click.source_id).value = ''
+    handleClick(click) {
+        var outputText = document.getElementById(click.source_id).value
+        console.log(outputText)
+        document.getElementById(click.target_id).innerHTML = outputText
+        document.getElementById(click.source_id).value = ''
     }
 
-    return (
-        <a href="#" class="myButton" id={id} onClick={handleClick}>{text}</a>
-    );
+
+    render () {
+        return ( <a href="#" class="myButton"  onClick={() => this.handleClick(this.props.click)}>{this.props.text}</a>)  
+    }
   };
+
