@@ -13,8 +13,8 @@ import React from 'react'
     render () {
         return (
         <div>
-        <h2 id={this.props.id} className='labelCenter'></h2>
-        {this.props.children}
+            <h2 id={this.props.id} className='labelCenter'></h2>
+            {this.props.children}
         </div>
       )  
     }

@@ -6,13 +6,13 @@ export class MyInput extends React.Component {
     render () {
         return ( 
         <div className='Input'>
-        <input 
-        id={this.props.id} 
-        className='Input-text'
-        placeholder={this.props.attributes.placeholder} 
-        >
-        </input>
-        <label for="input" class="Input-label">{this.props.text}</label>      
+            <input 
+            id={this.props.id} 
+            className='Input-text'
+            placeholder={this.props.attributes.placeholder} 
+            >
+            </input>
+            <label for="input" class="Input-label">{this.props.text}</label>      
          </div>  
         )  
     }

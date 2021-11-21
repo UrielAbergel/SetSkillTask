@@ -11,7 +11,7 @@ import React from "react";
 
     }
     
-    handleClick(e) {
+    handleClick() {
       this.setState({
         open: !this.state.open
       });}
@@ -19,9 +19,9 @@ import React from "react";
     render () {
         return (
           <div id={this.props.id}>
-          <h1 onClick={() => this.handleClick(this.setState())}>{this.props.title}</h1> 
-          {this.state.open ? this.props.children : null} 
-        </div>
+            <h1 onClick={() => this.handleClick(this.setState())}>{this.props.title}</h1> 
+            {this.state.open ? this.props.children : null} 
+          </div>
          )  
     }
   };
